@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtonq08rd3i1v"]
+
+[ext_resource type="Script" uid="uid://b2qcd4sr2da5y" path="res://scripts/player.gd" id="1_3vyb7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+radius = 1.0
+height = 4.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3vyb7"]
+radius = 1.0
+height = 4.0
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_3vyb7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_u8vuu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CapsuleMesh_3vyb7")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34871, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+target_position = Vector3(0, -8, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InventoryLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 85.0
+offset_bottom = 33.0
+text = "Inventory"
+
+[node name="DirtLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 50.0
+offset_bottom = 53.0
+
+[node name="GrassLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 73.0
+
+[node name="StoneLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 70.0
+offset_right = 50.0
+offset_bottom = 93.0
+
+[node name="SelectedLabel" type="Label" parent="CanvasLayer"]
+offset_top = 150.0
+offset_right = 130.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 18
+text = "Selected: None"
+
+[node name="WoodLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 90.0
+offset_right = 50.0
+offset_bottom = 113.0
