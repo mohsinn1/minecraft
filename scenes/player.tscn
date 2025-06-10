@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtonq08rd3i1v"]
+[gd_scene load_steps=5 format=3 uid="uid://dtonq08rd3i1v"]
 
 [ext_resource type="Script" uid="uid://b2qcd4sr2da5y" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="FontFile" uid="uid://bamk4eixfg2vh" path="res://assets/minecraft_font.ttf" id="2_g2els"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 radius = 1.0
@@ -34,35 +35,73 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = 85.0
 offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("2_g2els")
 text = "Inventory"
 
 [node name="DirtLabel" type="Label" parent="CanvasLayer"]
 offset_left = 10.0
-offset_top = 30.0
+offset_top = 40.0
 offset_right = 50.0
-offset_bottom = 53.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("2_g2els")
 
 [node name="GrassLabel" type="Label" parent="CanvasLayer"]
 offset_left = 10.0
-offset_top = 50.0
+offset_top = 65.0
 offset_right = 50.0
-offset_bottom = 73.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_g2els")
 
 [node name="StoneLabel" type="Label" parent="CanvasLayer"]
-offset_left = 10.0
-offset_top = 70.0
-offset_right = 50.0
-offset_bottom = 93.0
-
-[node name="SelectedLabel" type="Label" parent="CanvasLayer"]
-offset_top = 150.0
-offset_right = 130.0
-offset_bottom = 176.0
-theme_override_font_sizes/font_size = 18
-text = "Selected: None"
-
-[node name="WoodLabel" type="Label" parent="CanvasLayer"]
 offset_left = 10.0
 offset_top = 90.0
 offset_right = 50.0
 offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("2_g2els")
+
+[node name="SelectedLabel" type="Label" parent="CanvasLayer"]
+offset_left = 480.0
+offset_top = 550.0
+offset_right = 640.0
+offset_bottom = 576.0
+theme_override_fonts/font = ExtResource("2_g2els")
+theme_override_font_sizes/font_size = 18
+text = "Selected: None"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WoodLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 115.0
+offset_right = 50.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("2_g2els")
+
+[node name="CraftLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 280.0
+offset_right = 50.0
+offset_bottom = 303.0
+theme_override_fonts/font = ExtResource("2_g2els")
+
+[node name="RecipesLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 250.0
+offset_right = 90.0
+offset_bottom = 273.0
+theme_override_fonts/font = ExtResource("2_g2els")
+text = "Recipes:"
+
+[node name="PlankLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 140.0
+offset_right = 50.0
+offset_bottom = 163.0
+theme_override_fonts/font = ExtResource("2_g2els")
+
+[node name="StickLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 165.0
+offset_right = 50.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("2_g2els")

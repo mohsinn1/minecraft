@@ -33,12 +33,14 @@ func damage_block(world_position: Vector3) -> void:
 
 		# Play break sound
 		if break_sound:
-			break_sound.play()
+			$AudioStreamPlayer3D.stream = break_sound
+			$AudioStreamPlayer3D.play()
 
 	else:
 		# First hit sound
 		if hit_sound:
-			hit_sound.play()
+			$AudioStreamPlayer3D.stream = hit_sound
+			$AudioStreamPlayer3D.play()
 
 
 
