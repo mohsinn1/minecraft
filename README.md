@@ -26,9 +26,16 @@ This project implements a Minecraft-like block world in Godot 4, complete with a
 
 ---
 
+
+
+
 ## How to Use
 
 - **Movement**: Use W/A/S/D to move and Spacebar to jump.
 - **Blocks**: Use E and Q to cycle through block types. Place blocks with the Left Mouse Button and break them with the Right Mouse Button.
 - **Crafting**: For the crafting label, use Right/Left Arrow to change recipes. Press C to craft the currently selected recipe.
 - **Day/Night Cycle**: The game world simulates a 24-hour cycle. Hold T to rapidly advance time for testing sunrise, sunset, and night.
+
+## Day/Night Cycle
+I also added a day and night cycle which updates the light and the sky in the world in real time.
+
